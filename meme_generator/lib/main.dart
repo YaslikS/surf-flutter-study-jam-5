@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meme_generator/repo/download_picture_repo/bloc/picture_bloc.dart';
 import 'package:meme_generator/screen/meme_generator_screen.dart';
+
+import 'theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -7,19 +10,19 @@ void main() async {
   runApp(const MyApp());
 }
 
-/// App,s main widget.
 class MyApp extends StatelessWidget {
-  /// Constructor for [MyApp].
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return BlocProvider(
+      create: (context) => PictureBloc(),
+      child: MaterialApp(
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        home: const MemeGeneratorScreen(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: const MemeGeneratorScreen(),
     );
   }
 }

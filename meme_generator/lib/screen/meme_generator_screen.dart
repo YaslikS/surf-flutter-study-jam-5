@@ -1,61 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:meme_generator/repo/download_picture_repo/bloc/picture_bloc.dart';
+import 'package:meme_generator/screen/widgets/export_meme_widgets.dart';
+import 'package:meme_generator/theme/theme.dart';
 
-class MemeGeneratorScreen extends StatelessWidget {
+class MemeGeneratorScreen extends StatefulWidget {
   const MemeGeneratorScreen({Key? key}) : super(key: key);
 
   @override
+  State<MemeGeneratorScreen> createState() => _MemeGeneratorScreenState();
+}
+
+class _MemeGeneratorScreenState extends State<MemeGeneratorScreen> {
+  String _textMeme = "";
+
+  @override
   Widget build(BuildContext context) {
-    final decoration = BoxDecoration(
-      border: Border.all(
-        color: Colors.white,
-        width: 2,
-      ),
-    );
+    final state = context.watch<PictureBloc>().state;
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: ColoredBox(
-          color: Colors.black,
-          child: DecoratedBox(
-            decoration: decoration,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 50,
-                vertical: 20,
+      appBar: AppBar(
+        title: const Text("MemeGenerator"),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: Paddings.padding8,
+          ),
+          child: Column(
+            children: [
+              EditMemeWidget(
+                textMameChanged: textMemeChanged,
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(
-                    width: double.infinity,
-                    height: 200,
-                    child: DecoratedBox(
-                      decoration: decoration,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: Image.network(
-                          'https://i.cbc.ca/1.6713656.1679693029!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/this-is-fine.jpg',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const Text(
-                    'Здесь мог бы быть ваш мем',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Impact',
-                      fontSize: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+              const SizedBox(height: Spaces.space8),
+              BottomWidget(
+                  memeWidget: MemeWidget(
+                state: state,
+                textMeme: _textMeme,
+              )),
+            ],
           ),
         ),
       ),
     );
+  }
+
+  textMemeChanged(String textMeme) {
+    setState(() {
+      _textMeme = textMeme;
+    });
   }
 }
