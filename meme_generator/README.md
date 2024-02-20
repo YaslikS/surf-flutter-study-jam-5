@@ -1,16 +1,9 @@
-# meme_generator
+Разрабатывал под мобильные платформы. Тестил на симуляторе iOS. Android Studio 2023.1.1 Patch 2
 
-A new Flutter project.
+Сначала думал сделать Продвинутый, но из-за неизученности некоторых пригодившихся библиотек сделал польностью Средний. Вдобавок пытался сохранять какую-то декомпозицию, архиректуру и читаемость кода. Сделал темную/светлую тему, выделил почти все константы в отдельный файл. Возможно смог бы чуть больше, если бы сразу начан делать через bloc. Изначально по неправильному пути пошел. Подумал, что информации в приложении передается немного и url картинки и текст через калбеки перебрасывал. Потом начал среднее делать и понял, что без состояний тут никак вообще. Убрал калбеки на url и сделал их через bloc.
 
-## Getting Started
+А картинку делал через создание картинки из виджета. Не видел иного быстрого пути.
 
-This project is a starting point for a Flutter application.
+В целом тема с мемами зашла, было весело:)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Ссылка на скринкаст: https://mega.nz/file/qdM1WIqa#lGFmZRtggqvYu6RyALJ_evyLvPaU22HUJRnGEK1tNFk
