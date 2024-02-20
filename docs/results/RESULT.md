@@ -16,3 +16,9 @@ Android Studio 2023.1.1 Patch 2
 
 Скринкаст вложен в эту же папку
 Ссылка на скринкаст: https://mega.nz/file/qdM1WIqa#lGFmZRtggqvYu6RyALJ_evyLvPaU22HUJRnGEK1tNFk
+
+А еще мемы, чообы проверяющий улыбнулся :3
+![Снимок экрана 2024-02-20 в 18 07 09](https://github.com/YaslikS/surf-flutter-study-jam-5/assets/58375980/152fa21b-34bf-4840-b6a1-3918a7b51cd7)
+![Снимок экрана 2024-02-20 в 18 10 47](https://github.com/YaslikS/surf-flutter-study-jam-5/assets/58375980/11656b37-390b-4bb3-9536-5d3b895016f1)
+![Снимок экрана 2024-02-20 в 18 12 45](https://github.com/YaslikS/surf-flutter-study-jam-5/assets/58375980/0dab1cd7-d9c7-41aa-9edd-5d42764f5aea)
+
