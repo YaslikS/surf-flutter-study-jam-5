@@ -14,5 +14,5 @@ Android Studio 2023.1.1 Patch 2
 
 В целом тема с мемами зашла, было весело:)
 
-
+Скринкаст вложен в эту же папку
 Ссылка на скринкаст: https://mega.nz/file/qdM1WIqa#lGFmZRtggqvYu6RyALJ_evyLvPaU22HUJRnGEK1tNFk
